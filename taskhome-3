@@ -27,7 +27,7 @@ function jumlah(a, b, operator, callback) {
 
 // 375 / 125 * 3 ** 2 - 750 + 96 * 10 * 84 / 12
 function setHasil1(hasil){
-    console.log(`Hasil Perhitungan A: ${hasil}`);
+    console.log('Hasil Perhitungan A = ', hasil);
 }
 jumlah(375, 125, '/', (hasil) =>{
     jumlah(hasil, 3, '*', (hasil1) =>{
@@ -47,7 +47,7 @@ jumlah(375, 125, '/', (hasil) =>{
 
 // 500 - 625 / 5 + 84 / 12 * 96 / 12
 function setHasil2(hasil){
-    console.log(`Hasil Perhitungan B: ${hasil}`);
+    console.log('Hasil Perhitungan B = ', hasil);
 }
 jumlah(625, 5, '/', (hasil) =>{
     jumlah(500, hasil, '-', (hasil1) =>{
@@ -63,7 +63,7 @@ jumlah(625, 5, '/', (hasil) =>{
 
 // 750 / 2 + (125 / 5 * 96 / 12) + (375 * 84)
 function setHasil3(hasil){
-    console.log(`Hasil Perhitungan C: ${hasil}`);
+    console.log('Hasil Perhitungan C = ', hasil);
 }
 jumlah(750, 2, '/', (hasil) =>{
     jumlah(125, 5, '/', (hasil1) =>{
@@ -81,7 +81,7 @@ jumlah(750, 2, '/', (hasil) =>{
 
 // 1000 - (750 / 125) - 12 + (96 * 10 * 500 / 250)
 function setHasil4(hasil){
-    console.log(`Hasil Perhitungan D: ${hasil}`);
+    console.log('Hasil Perhitungan D = ', hasil);
 }
 jumlah(750, 125, '/', (hasil) =>{
     jumlah(96, 10, '*', (hasil1) =>{
@@ -99,7 +99,7 @@ jumlah(750, 125, '/', (hasil) =>{
 
 //  (36 ** 2 / 72) +(125 * 10) - (24 * 3)
 function setHasil5(hasil){
-    console.log(`Hasil Perhitungan E: ${hasil}`);
+    console.log('Hasil Perhitungan E = ', hasil);
 }
 jumlah(36, 2, '**', (hasil) =>{
     jumlah(hasil, 72, '/', (hasil1) =>{
@@ -115,7 +115,7 @@ jumlah(36, 2, '**', (hasil) =>{
 
 // (500 / 100 * 20) + (84 * 2) - (125 / 5)
 function setHasil6(hasil){
-    console.log(`Hasil Perhitungan F: ${hasil}`);
+    console.log('Hasil Perhitungan F = ', hasil);
 }
 jumlah(500, 100, '/', (hasil) =>{
     jumlah(hasil, 20, '*', (hasil1) =>{
@@ -131,7 +131,7 @@ jumlah(500, 100, '/', (hasil) =>{
 
 // (375 * 2) - (750 / 25) + (1000 / 50)
 function setHasil7(hasil){
-    console.log(`Hasil Perhitungan G: ${hasil}`);
+    console.log('Hasil Perhitungan G = ', hasil);
 }
 jumlah(375, 2, '*', (hasil) =>{
     jumlah(750, 25, '/', (hasil1) =>{
@@ -145,7 +145,7 @@ jumlah(375, 2, '*', (hasil) =>{
 
 // 12 * 12 * 2 - 84 + 96 ** 2
 function setHasil8(hasil){
-    console.log(`Hasil Perhitungan H: ${hasil}`);
+    console.log('Hasil Perhitungan H = ', hasil);
 }
 jumlah(12, 12, '*', (hasil) =>{
     jumlah(hasil, 2, '*', (hasil1) =>{
@@ -159,7 +159,7 @@ jumlah(12, 12, '*', (hasil) =>{
 
 // 750 / 25 * 375 / 125 * 72 / 12 + 84 * 12
 function setHasil9(hasil){
-    console.log(`Hasil Perhitungan I: ${hasil}`);
+    console.log('Hasil Perhitungan I =', hasil);
 }
 jumlah(750, 25, '/', (hasil) =>{
     jumlah(hasil, 375, '*', (hasil1) =>{
@@ -177,7 +177,7 @@ jumlah(750, 25, '/', (hasil) =>{
 
 // 96 / 12 ** 2 + 625 / 5 - 375 * 84
 function setHasil10(hasil){
-    console.log(`Hasil Perhitungan J: ${hasil}`);
+    console.log('Hasil Perhitungan J =', hasil);
 }
 jumlah(96, 12, '/', (hasil) =>{
     jumlah(hasil, 2, '**', (hasil1) =>{
@@ -193,7 +193,7 @@ jumlah(96, 12, '/', (hasil) =>{
 
 // 250 / 25 * 10 + 36 ** 2 / 72 - 125 * 10
 function setHasil11(hasil){
-    console.log(`Hasil Perhitungan k: ${hasil}`);
+    console.log('Hasil Perhitungan k =', hasil);
 }
 jumlah(250, 25, '/', (hasil) =>{
     jumlah(hasil, 10, '*', (hasil1) =>{
@@ -211,7 +211,7 @@ jumlah(250, 25, '/', (hasil) =>{
 
 // 375 / 125 * 100 + 500 / 250 * 50 - 96 * 10
 function setHasil12(hasil){
-    console.log(`Hasil Perhitungan L: ${hasil}`);
+    console.log('Hasil Perhitungan L =', hasil);
 }
 jumlah(375, 125, '/', (hasil) =>{
     jumlah(hasil, 100, '*', (hasil1) =>{
@@ -229,7 +229,7 @@ jumlah(375, 125, '/', (hasil) =>{
 
 // 750 / 25 - 375 / 125 + 96 ** 2 / 12 ** 2
 function setHasil13(hasil){
-    console.log(`Hasil Perhitungan M: ${hasil}`);
+    console.log('Hasil Perhitungan M =', hasil);
 }
 jumlah(750, 25, '/', (hasil) =>{
     jumlah(375, 125, '*', (hasil1) =>{
@@ -247,7 +247,7 @@ jumlah(750, 25, '/', (hasil) =>{
 
 // 1000 / 500 * 375 / 125 * 72 / 12 - 84 * 12
 function setHasil14(hasil){
-    console.log(`Hasil Perhitungan N: ${hasil}`);
+    console.log('Hasil Perhitungan N =', hasil);
 }
 jumlah(1000, 500, '/', (hasil) =>{
     jumlah(hasil, 375, '*', (hasil1) =>{
@@ -265,7 +265,7 @@ jumlah(1000, 500, '/', (hasil) =>{
 
 // 96 / 12 ** 2 - 500 / 250 * 375 / 125 + 84 * 2
 function setHasil15(hasil){
-    console.log(`Hasil Perhitungan O: ${hasil}`);
+    console.log('Hasil Perhitungan O =', hasil);
 }
 jumlah(96, 12, '/', (hasil) =>{
     jumlah(hasil, 2, '**', (hasil1) =>{
