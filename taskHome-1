@@ -1,0 +1,52 @@
+console.log('Taskhome Callback');
+
+function jumlah(a, b, hasil){
+    setTimeout(()=> {
+        hasil(a + b);
+    });
+ }
+ let hasilPenjumlahan = 0;
+ jumlah(10, 20, (result)=> {
+    console.log(result);
+ })
+
+function kurang(a, b, hasil){
+    setTimeout(()=> {
+        hasil(a - b);
+    });
+ }
+ let hasilPengurangan = 0;
+ kurang(10, 20, (result)=> {
+    console.log(result);
+ })
+
+function kali(a, b, hasil){
+    setTimeout(()=> {
+        hasil(a * b);
+    });
+ }
+ let hasilPengalian = 0;
+ kali(10, 20, (result)=> {
+    console.log(result);
+ })
+
+function bagi(a, b, hasil){
+    setTimeout(()=> {
+        hasil(a / b);
+    });
+ }
+ let hasilPembagian = 0;
+ bagi(10, 20, (result)=> {
+    console.log(result);
+ })
+
+function pangkat(a, b, hasil){
+    setTimeout(()=> {
+        hasil(a ** b);
+    });
+ }
+ let hasilPangkat = 0;
+ pangkat(10, 2, (result)=> {
+    console.log(result);
+ })
+

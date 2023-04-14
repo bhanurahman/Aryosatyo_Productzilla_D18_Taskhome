@@ -1,0 +1,15 @@
+setTimeout(()=>{
+    console.log('dijalankan setelah 0 detik');
+}, 0);
+setTimeout(()=>{
+    console.log('dijalankan setelah 1 detik');
+}, 1000);
+setTimeout(()=>{
+    console.log('dijalankan setelah 2 detik');
+}, 2000);
+setTimeout(()=>{
+    console.log('dijalankan setelah 3 detik');
+}, 3000);
+setTimeout(()=>{
+    console.log('dijalankan setelah 4 detik');
+}, 4000);

@@ -1,0 +1,54 @@
+const p1 = new Promise((resolve, reject)=>{
+    let error = true;
+    if (error){
+        reject('ada error');
+    } else {
+        resolve('hello');
+    }
+});
+// console.log(p1);
+p1.then((d) => {
+ console.log(d);   
+}).catch((e) => {
+    console.log('rejected');
+    console.log(e);
+})
+
+console.log('----------------------------------');
+
+function jumlahPromise(a, b) {
+    const p = new Promise((resolve, reject)=>{
+        if (typeof a != 'number' || typeof b != 'number'){
+            reject('ada angka tapi string');
+        } else {
+            resolve(a + b);
+        }
+    });
+    return p;
+}
+
+jumlahPromise(10, 20)
+    .then((d) => {
+        return jumlahPromise(d, 20)
+    })
+    .then((d) => {
+        return jumlahPromise(d, 30);
+    })
+    .then((d) => {
+        return jumlahPromise(d, 40);
+    })
+    .then((d) => {
+        return jumlahPromise(d, 50);
+    })
+    .then((d) => {
+        return jumlahPromise(d, 60);
+    })
+    .then((d) => {
+        console.log('hasilnya = ', d);
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+    .finally(() =>{
+        console.log('done, and always executed');
+    })

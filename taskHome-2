@@ -1,0 +1,121 @@
+console.log("Take Home Task Promise");
+
+function jumlah(a,b){
+    const penjumlahan= new Promise ((resolve,reject)=>{
+        if(typeof a!="number"||typeof b!="number"){
+            reject ("ada angka tapi string")
+        }
+        else{
+            resolve (a + b);
+        }
+    })
+    return penjumlahan;
+}
+let hasilPenjumlahan=0
+jumlah(10,20)
+.then (function(hasil){ 
+    console.log("Hasil Penjumlahan 10 + 20 = ", hasil);
+})
+.catch(function(e){
+    console.log(e)
+})
+.finally(()=>{
+    console.log ("BERHASIL")
+})
+
+
+function kurang(a,b){
+    const pengurangan= new Promise ((resolve,reject)=>{
+        if(typeof a!="number"||typeof b!="number"){
+            reject ("ada angka tapi string")
+        }
+        else{
+            resolve (a - b);
+        }
+    })
+    return pengurangan;
+}
+let hasilPengurangan=0
+kurang(10,20)
+.then (function(hasil){ 
+    console.log("Hasil Pengurangan 10 - 20 = ", hasil);
+})
+.catch(function(e){
+    console.log(e)
+})
+.finally(()=>{
+    console.log ("BERHASIL")
+})
+
+
+function kali(a,b){
+    const perkalian= new Promise ((resolve,reject)=>{
+        if(typeof a!="number"||typeof b!="number"){
+            reject ("ada angka tapi string")
+        }
+        else{
+            resolve (a * b);
+        }
+    })
+    return perkalian;
+}
+let hasilKali=0
+kali(10,20)
+.then (function(hasil){ 
+    console.log("Hasil Kali 10 * 20 = ", hasil);
+})
+.catch(function(e){
+    console.log(e)
+})
+.finally(()=>{
+    console.log ("BERHASIL")
+})
+
+
+function bagi(a,b){
+    const pembagian= new Promise ((resolve,reject)=>{
+        if(typeof a!="number"||typeof b!="number"){
+            reject ("ada angka tapi string")
+        }
+        else{
+            resolve (a / b);
+        }
+    })
+    return pembagian;
+}
+let hasilbagi=0
+bagi(10,20)
+.then (function(hasil){ 
+    console.log("Hasil Pembagian 10 / 20 = ", hasil);
+})
+.catch(function(e){
+    console.log(e)
+})
+.finally(()=>{
+    console.log ("BERHASIL")
+})
+
+
+function pangkat(a , b){
+    const perpangkatan= new Promise ((resolve,reject)=>{
+        if(typeof a!="number"||typeof b!="number"){
+            reject ("ada angka tapi string")
+        }
+        else{
+            resolve (a ** b);
+        }
+    })
+    return perpangkatan;
+}
+let hasilPangkat = 0
+pangkat(2,10)
+.then (function(hasil){ 
+    console.log("Hasil Perpangkatan 2 ** 10 = ", hasil);
+})
+.catch(function(e){
+    console.log(e)
+})
+.finally(()=>{
+    console.log ("BERHASIL")
+})
+

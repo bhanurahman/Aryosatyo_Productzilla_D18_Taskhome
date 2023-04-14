@@ -1,0 +1,43 @@
+function jumlah(a, b, hasil) {
+    setTimeout(()=>{
+        if (typeof a != 'number' || typeof b != 'number'){
+            hasil('ada angka tapi string', null);
+        } else {
+            hasil(null, a + b);
+        }
+    }, 0)
+}
+function jumlahPromise(a, b) {
+    const p = new Promise((resolve, reject)=>{
+        jumlah(a,b, (err, hasil)=>{
+            if (err){
+                reject (err)
+            } else {
+                resolve(hasil);  
+            }
+        });
+    });
+    return p;
+}
+jumlahPromise(10, 20)
+    .then((d) => {
+        return jumlahPromise(d, 20)
+    })
+    .then((d) => {
+        return jumlahPromise(d, 30);
+    })
+    .then((d) => {
+        return jumlahPromise(d, 40);
+    })
+    .then((d) => {
+        return jumlahPromise(d, 50);
+    })
+    .then((d) => {
+        return jumlahPromise(d, 60);
+    })
+    .then((d) => {
+        console.log('hasilnya = ', d);
+    })
+    .catch((err) => {
+        console.log(err);
+    })
