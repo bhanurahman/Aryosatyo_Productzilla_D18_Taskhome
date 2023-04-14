@@ -1,0 +1,284 @@
+console.log('taskhome 3');
+console.log('Maaf mas saya ngertinya pake cara callback hell walaupun tangan saya pegal yang penting selesai dulu aja');
+console.log('Maaf mas saya ngertinya pake cara callback hell walaupun tangan saya pegal yang penting selesai dulu aja');
+function jumlah(a, b, operator, callback) {
+    let hasil;
+    switch(operator) {
+        case '+':
+            hasil = a + b;
+            break;
+        case '-':
+            hasil = a - b;
+            break;
+        case '*':
+            hasil = a * b;
+            break;
+        case '/':
+            hasil = a / b;
+            break;
+        case '**':
+            hasil = a ** b;
+            break;
+        default:
+            hasil = 0;
+    }
+    callback(hasil)
+}
+
+// 375 / 125 * 3 ** 2 - 750 + 96 * 10 * 84 / 12
+function setHasil1(hasil){
+    console.log(`Hasil Perhitungan A: ${hasil}`);
+}
+jumlah(375, 125, '/', (hasil) =>{
+    jumlah(hasil, 3, '*', (hasil1) =>{
+        jumlah(hasil1, 2, '**', (hasil2) =>{
+            jumlah(hasil2, 750, '-', (hasil3) =>{
+                jumlah(96, 10, '*', (hasil4) =>{
+                    jumlah(hasil4, 84, '*', (hasil5) =>{
+                        jumlah(hasil5, 12, '/', (hasil6)=>{
+                            jumlah(hasil3, hasil6, '-', setHasil1);
+                        })
+                    })
+                })
+            })
+        })
+    })   
+})
+
+// 500 - 625 / 5 + 84 / 12 * 96 / 12
+function setHasil2(hasil){
+    console.log(`Hasil Perhitungan B: ${hasil}`);
+}
+jumlah(625, 5, '/', (hasil) =>{
+    jumlah(500, hasil, '-', (hasil1) =>{
+        jumlah(84, 12, '/', (hasil2) =>{
+            jumlah(hasil2, 96, '*', (hasil3) =>{
+                jumlah(hasil3, 12, '/', (hasil4) =>{
+                    jumlah(hasil1, hasil4, '+', setHasil2 )
+                })
+            })
+        })
+    })   
+})
+
+// 750 / 2 + (125 / 5 * 96 / 12) + (375 * 84)
+function setHasil3(hasil){
+    console.log(`Hasil Perhitungan C: ${hasil}`);
+}
+jumlah(750, 2, '/', (hasil) =>{
+    jumlah(125, 5, '/', (hasil1) =>{
+        jumlah(hasil1, 96, '*', (hasil2) =>{
+            jumlah(hasil2, 12, '/', (hasil3) =>{
+                jumlah(375, 84, '*', (hasil4) =>{
+                    jumlah(hasil, hasil3, '+', (hasil5)=>{
+                        jumlah(hasil5, hasil4, '+', setHasil3)
+                    })
+                })
+            })
+        })
+    })   
+})
+
+// 1000 - (750 / 125) - 12 + (96 * 10 * 500 / 250)
+function setHasil4(hasil){
+    console.log(`Hasil Perhitungan D: ${hasil}`);
+}
+jumlah(750, 125, '/', (hasil) =>{
+    jumlah(96, 10, '*', (hasil1) =>{
+        jumlah(hasil1, 500, '*', (hasil2) =>{
+            jumlah(hasil2, 250, '/', (hasil3) =>{
+                jumlah(1000, hasil, '-', (hasil4) =>{
+                    jumlah(hasil4, 12, '-', (hasil5)=>{
+                        jumlah(hasil5, hasil3, '+', setHasil4)
+                    })
+                })
+            })
+        })
+    })   
+})
+
+//  (36 ** 2 / 72) +(125 * 10) - (24 * 3)
+function setHasil5(hasil){
+    console.log(`Hasil Perhitungan E: ${hasil}`);
+}
+jumlah(36, 2, '**', (hasil) =>{
+    jumlah(hasil, 72, '/', (hasil1) =>{
+        jumlah(125, 10, '*', (hasil2) =>{
+            jumlah(24, 3, '*', (hasil3) =>{
+                jumlah(hasil1, hasil2, '+', (hasil4) =>{
+                    jumlah(hasil4, hasil3, '-', setHasil5)
+                })
+            })
+        })
+    })
+})
+
+// (500 / 100 * 20) + (84 * 2) - (125 / 5)
+function setHasil6(hasil){
+    console.log(`Hasil Perhitungan F: ${hasil}`);
+}
+jumlah(500, 100, '/', (hasil) =>{
+    jumlah(hasil, 20, '*', (hasil1) =>{
+        jumlah(84, 2, '*', (hasil2) =>{
+            jumlah(125, 5, '/', (hasil3) =>{
+                jumlah(hasil1, hasil2, '+', (hasil4) =>{
+                    jumlah(hasil4, hasil3, '-', setHasil6)
+                })
+            })
+        })
+    })   
+})
+
+// (375 * 2) - (750 / 25) + (1000 / 50)
+function setHasil7(hasil){
+    console.log(`Hasil Perhitungan G: ${hasil}`);
+}
+jumlah(375, 2, '*', (hasil) =>{
+    jumlah(750, 25, '/', (hasil1) =>{
+        jumlah(1000, 50, '/', (hasil2) =>{
+            jumlah(hasil, hasil1, '-', (hasil3) =>{
+                jumlah(hasil3, hasil2, '+', setHasil7)
+            })
+        })
+    })   
+})
+
+// 12 * 12 * 2 - 84 + 96 ** 2
+function setHasil8(hasil){
+    console.log(`Hasil Perhitungan H: ${hasil}`);
+}
+jumlah(12, 12, '*', (hasil) =>{
+    jumlah(hasil, 2, '*', (hasil1) =>{
+        jumlah(96, 2, '**', (hasil2) =>{
+            jumlah(hasil1, 84, '-', (hasil3) =>{
+                jumlah(hasil3, hasil2, '+', setHasil8)
+            })
+        })
+    })   
+})
+
+// 750 / 25 * 375 / 125 * 72 / 12 + 84 * 12
+function setHasil9(hasil){
+    console.log(`Hasil Perhitungan I: ${hasil}`);
+}
+jumlah(750, 25, '/', (hasil) =>{
+    jumlah(hasil, 375, '*', (hasil1) =>{
+        jumlah(hasil1, 125, '/', (hasil2) =>{
+            jumlah(hasil2, 72, '*', (hasil3) =>{
+                jumlah(hasil3, 12, '/',(hasil4)=>{
+                    jumlah(84, 12, '*', (hasil5)=>{
+                        jumlah(hasil4, hasil5,'+', setHasil9)
+                    })
+                })
+            })
+        })
+    })   
+})
+
+// 96 / 12 ** 2 + 625 / 5 - 375 * 84
+function setHasil10(hasil){
+    console.log(`Hasil Perhitungan J: ${hasil}`);
+}
+jumlah(96, 12, '/', (hasil) =>{
+    jumlah(hasil, 2, '**', (hasil1) =>{
+        jumlah(625, 5, '/', (hasil2) =>{
+            jumlah(375, 84, '*', (hasil3) =>{
+                jumlah(hasil1, hasil2, '+',(hasil4)=>{
+                    jumlah(hasil4, hasil3, '-', setHasil10)
+                })
+            })
+        })
+    })   
+})
+
+// 250 / 25 * 10 + 36 ** 2 / 72 - 125 * 10
+function setHasil11(hasil){
+    console.log(`Hasil Perhitungan k: ${hasil}`);
+}
+jumlah(250, 25, '/', (hasil) =>{
+    jumlah(hasil, 10, '*', (hasil1) =>{
+        jumlah(36, 2, '**', (hasil2) =>{
+            jumlah(hasil2, 72, '/', (hasil3) =>{
+                jumlah(125, 10, '*',(hasil4)=>{
+                    jumlah(hasil1, hasil3, '+', (hasil6)=>{
+                        jumlah(hasil4, hasil6, '-', setHasil11)
+                    })
+                })
+            })
+        })
+    })   
+})
+
+// 375 / 125 * 100 + 500 / 250 * 50 - 96 * 10
+function setHasil12(hasil){
+    console.log(`Hasil Perhitungan L: ${hasil}`);
+}
+jumlah(375, 125, '/', (hasil) =>{
+    jumlah(hasil, 100, '*', (hasil1) =>{
+        jumlah(500, 250, '/', (hasil2) =>{
+            jumlah(hasil2, 50, '*', (hasil3) =>{
+                jumlah(96, 10, '*',(hasil4)=>{
+                    jumlah(hasil1, hasil3, '+', (hasil6)=>{
+                        jumlah(hasil4, hasil6, '-', setHasil12)
+                    })
+                })
+            })
+        })
+    })   
+})
+
+// 750 / 25 - 375 / 125 + 96 ** 2 / 12 ** 2
+function setHasil13(hasil){
+    console.log(`Hasil Perhitungan M: ${hasil}`);
+}
+jumlah(750, 25, '/', (hasil) =>{
+    jumlah(375, 125, '*', (hasil1) =>{
+        jumlah(96, 2, '**', (hasil2) =>{
+            jumlah(hasil2, 12, '/', (hasil3) =>{
+                jumlah(hasil3, 2, '**',(hasil4)=>{
+                    jumlah(hasil, hasil1, '-', (hasil5)=>{
+                        jumlah(hasil5, hasil4, '+', setHasil13)
+                    })
+                })
+            })
+        })
+    })   
+})
+
+// 1000 / 500 * 375 / 125 * 72 / 12 - 84 * 12
+function setHasil14(hasil){
+    console.log(`Hasil Perhitungan N: ${hasil}`);
+}
+jumlah(1000, 500, '/', (hasil) =>{
+    jumlah(hasil, 375, '*', (hasil1) =>{
+        jumlah(hasil1, 125, '/', (hasil2) =>{
+            jumlah(hasil2, 72, '*', (hasil3) =>{
+                jumlah(hasil3, 12, '/',(hasil4)=>{
+                    jumlah(84, 12, '*', (hasil5)=>{
+                        jumlah(hasil4, hasil5, '-', setHasil14)
+                    })
+                })
+            })
+        })
+    })   
+})
+
+// 96 / 12 ** 2 - 500 / 250 * 375 / 125 + 84 * 2
+function setHasil15(hasil){
+    console.log(`Hasil Perhitungan O: ${hasil}`);
+}
+jumlah(96, 12, '/', (hasil) =>{
+    jumlah(hasil, 2, '**', (hasil1) =>{
+        jumlah(500, 250, '/', (hasil2) =>{
+            jumlah(hasil2, 375, '*', (hasil3) =>{
+                jumlah(hasil3, 125, '/',(hasil4)=>{
+                    jumlah(84, 2, '*', (hasil5)=>{
+                        jumlah(hasil1, hasil4, '-',(hasil6)=>{
+                            jumlah(hasil6, hasil5, '+', setHasil15)
+                        })
+                    })
+                })
+            })
+        })
+    })   
+})
